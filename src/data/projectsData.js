@@ -1,0 +1,51 @@
+// Set github / demo to a URL string when available. null shows a disabled "Coming Soon" button.
+export const projects = [
+  {
+    title: 'Sports Talent Assessment',
+    category: 'Full Stack Project',
+    image: '/images/sports-talent.svg',
+    description: "Built a full-stack application to track and evaluate athletes' performance across different sports.",
+    features: [
+      'Developed the frontend using React.js.',
+      'Developed backend functionality using Python (Django/Flask).',
+      'Implemented scoring and evaluation logic.',
+      'Stored athlete information in a database.',
+      'Added performance comparison and result visualization features.',
+    ],
+    tech: ['React.js', 'Python', 'Django/Flask', 'Database', 'REST APIs'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: 'Real Estate Listing System',
+    category: 'React + REST API',
+    image: '/images/real-estate.svg',
+    description: 'Developed a web application for browsing and managing property listings with a responsive and user-friendly interface.',
+    features: [
+      'Built a responsive frontend using React.js.',
+      'Integrated REST APIs with the backend.',
+      'Displayed detailed property information.',
+      'Organized properties using category-based filtering.',
+      'Implemented mobile-friendly layouts.',
+    ],
+    tech: ['React.js', 'JavaScript', 'HTML', 'CSS', 'REST APIs'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: 'Personal Fitness Tracker',
+    category: 'Web-Based Full Stack Application',
+    image: '/images/fitness-tracker.svg',
+    description: 'Developed a full-stack web application that enables users to log workouts, track fitness progress, and monitor personal fitness goals.',
+    features: [
+      'Developed responsive frontend components using React.js.',
+      'Implemented backend APIs for user data and workout management.',
+      'Integrated user authentication.',
+      'Connected the application to a database.',
+      'Added workout history and progress-tracking features.',
+    ],
+    tech: ['React.js', 'Spring Boot', 'REST APIs', 'MySQL', 'Java'],
+    github: null,
+    demo: null,
+  },
+]

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 244 246 251; --surface: 255 255 255; --fg: 15 23 42; --muted: 82 94 118;
+  --accent: 109 40 217; --accent2: 8 145 178;
+}
+.dark {
+  --bg: 7 10 20; --surface: 20 26 46; --fg: 232 236 246; --muted: 150 160 184;
+  --accent: 139 92 246; --accent2: 34 211 238;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-bg text-fg font-sans antialiased; transition: background-color .3s, color .3s; }
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(60rem 30rem at 85% -5%, rgb(var(--accent) / .18), transparent 60%),
+              radial-gradient(50rem 30rem at -5% 40%, rgb(var(--accent2) / .12), transparent 60%);
+}
+:focus-visible { outline: 2px solid rgb(var(--accent2)); outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+@layer components {
+  .glass { @apply rounded-2xl border border-fg/10 bg-surface/60 backdrop-blur-md shadow-lg shadow-black/5; }
+  .glass-hover { @apply transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-accent/10; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0; }
+  .btn-primary { @apply btn bg-gradient-to-r from-accent to-accent2 text-white shadow-lg shadow-accent/25 hover:shadow-accent/40; }
+  .btn-ghost { @apply btn border border-fg/15 bg-surface/50 hover:border-accent/60 hover:bg-accent/10; }
+  .tag { @apply inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium; }
+  .section { @apply mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24; }
+  .field { @apply w-full rounded-xl border border-fg/15 bg-bg/60 px-4 py-3 text-sm outline-none transition placeholder:text-muted/70 focus:border-accent2 focus:ring-2 focus:ring-accent2/30; }
+}

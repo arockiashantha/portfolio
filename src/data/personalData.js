@@ -25,7 +25,8 @@ export const personal = {
   email: 'arockiashantha9@gmail.com',
   location: 'Devakottai, Sivaganga, Tamil Nadu, India',
   linkedin: 'https://linkedin.com/in/arockia-shantha-a-59a9052a2',
-  github: 'https://github.com/Arockia1412',
+  // github: 'https://github.com/Arockia1412',
+  github: 'https://github.com/arockiashantha',
   leetcode: 'https://leetcode.com/u/Arockia_Shantha_A',
   // Replace /public/images/profile-placeholder.svg with your photo (e.g. profile.jpg) and update this path
   profileImage: '/images/profile.png',
